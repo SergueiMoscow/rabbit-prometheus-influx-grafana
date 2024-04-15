@@ -2,3 +2,4 @@ conf/certbot
 data/*
 *.log
 .env
+readme.sss
