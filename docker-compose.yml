@@ -132,6 +132,17 @@ services:
     depends_on:
       - node-exporter
 
+  chronograf:
+    image: chronograf:1.8
+    ports:
+      - '8888:8888'
+    networks:
+      - backend
+    environment:
+      INFLUXDB_URL: http://influx:8086
+    depends_on:
+      - influx
+
   node-exporter:
     image: prom/node-exporter:v0.18.1
     container_name: node-exporter
