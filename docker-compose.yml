@@ -134,6 +134,7 @@ services:
 
   chronograf:
     image: chronograf:1.8
+    container_name: chronograf
     ports:
       - '8888:8888'
     networks:
